@@ -1,13 +1,18 @@
-# testcafe with jessie
+# testcafe with debian-jessie/debian-stretch/alpine3.9
 
-image for a single testcafe(https://github.com/DevExpress/testcafe) with jessie/stretch/alpine. this docker image is a builder for screen dependancies.
+image of testcafe (https://github.com/DevExpress/testcafe) with slim versions of debian-jessie/debian-stretch/alpine. this docker image is a builder for screen dependancies.
+
+image dependancies :
+
+- testcafe:jessie - official node:10.15-jessie-slim
+- testcafe:stretch - official node:10.15-stretch-slim
+- testcafe:alpine - official node:10.15-alpine
 
 included packages :
 
 - tini 0.18.0 (https://github.com/krallin/tini)
-- node:10.15.0-jessie / stretch / alpine 3.9
 
-# to use
+# how to use
 
 for help
 
@@ -15,7 +20,7 @@ for help
 $ make
 ```
 
-for building container
+for building
 
 ```
 $ make build
@@ -24,5 +29,5 @@ $ make build
 for running container locally
 
 ```
-$ make run-daemon
+$ make daemon-run
 ```

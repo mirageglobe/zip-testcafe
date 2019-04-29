@@ -3,14 +3,22 @@ SHELL:=/bin/bash
 
 DCR_URL=mirageglobe
 DCR_IMG=testcafe
-DCR_TAG=stretch
+
+DCR_DISTRO_STRETCH=stretch
+DCR_DISTRO_JESSIE=jessie
+DCR_DISTRO_ALPINE=alpine
+
+# set distro default for default build. this will also be valid for version used for local container
+DCR_DISTRO_DEFAULT=${DCR_DISTRO_STRETCH}
+
+DCR_TAG=${DCR_DISTRO_DEFAULT}
 
 ##@ Tools
 
 .PHONY: build run stop
 # phony is used to make sure theres no similar file such as <target> that cause the make recipie not to work
 
-build:												## build image for testcafe
+build:												## build image for testcafe (default)
 	@echo ":: building ${DCR_URL}-${DCR_IMG} ::"
 	docker build -t ${DCR_URL}/${DCR_IMG}:${DCR_TAG} \
 		--rm \
