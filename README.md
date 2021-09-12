@@ -1,5 +1,7 @@
 # testcafe with debian-jessie/debian-stretch/alpine3.9
 
+This project is archived. for more information or support, please reachout to me (maintainer) or raise github issue
+
 image of testcafe (https://github.com/DevExpress/testcafe) with slim versions of debian-jessie/debian-stretch/alpine. this docker image is a builder for screen dependancies.
 
 - maintainer : jimmy mg lim (mirageglobe@gmail.com) / www.mirageglobe.com
